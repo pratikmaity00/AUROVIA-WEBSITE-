@@ -322,6 +322,9 @@ footer .container {
     padding: 8px;
     position: relative;
 }
+#email:focus {
+    color: white;
+}
 .newsletter input[type="submit"] {
     display: inline-block;
     color: white;
