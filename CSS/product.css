@@ -1,0 +1,326 @@
+/* font-family import */
+/* inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* playfair display font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --interFont: "Inter", sans-serif;
+    --playfairFont: "Playfair Display", serif;
+    --lightblack: #48474A;
+    --arkey: #800080;
+}
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    /* background-color: antiquewhite; */
+}
+
+/* common element */
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+img {
+    max-width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+h1 {
+    font-size: 68px;
+    font-family: var(--playfairFont);
+    color: white;
+    font-weight: 600; 
+    line-height: 1.5;
+    margin-bottom: 20px;  
+}
+h2 {
+    font-family: var(--playfairFont);
+    line-height: 1;
+    font-weight: 600;
+    color: var(--lightblack);
+    font-size: 40px;
+}
+h3 {
+    font-size: 20px;
+    font-family: var(--playfairFont);
+    font-weight: 600;
+    color: var(--lightblack);
+    line-height: 1;
+}
+p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+
+/* common class */
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.common-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    padding: 0 15px;
+}
+.col-25 {
+    width: 25%;
+}
+.col-33 {
+    width: 33.33%;
+}
+.col-50 {
+    width: 50%;
+}
+.btn {
+    padding: 10px 20px;
+    border: 2px solid var(--arkey);
+    border-radius: 8px;
+    color: var(--lightblack);
+    font-size: 18px;
+}
+.buttonDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.cardImg {
+    position: relative;
+    min-height: 320px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 67px;
+} 
+.cardImg img {
+    position: absolute;
+    left: 25%;
+    transform: translateY(25%);
+}
+.cardImg:hover {
+    box-shadow: 0 0 0 0 white;
+}
+.box:hover {
+    /* border: 1px solid rgba(0, 0, 0, 0.25); */
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.item-info {
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+.item-info p {
+    color: var(--lightblack);
+}
+.item-info span {
+    font-family: var(--playfairFont);
+    /* line-height: 1; */
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* navbar */
+.navbar {
+    background-color: white;
+    padding: 38px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navlogo img {
+    max-width: 115px;
+    width: 100%;
+    object-fit: contain;
+}
+.navItems {
+    display: flex;
+}
+.navlinks ul {
+    display: flex;
+}
+.navlinks li {
+    margin-right: 100px;
+}
+.navlinks a {
+    color: var(--lightblack);
+    /* font-size: 18px; */
+}
+.navicons ul {
+    display: flex;
+    align-items: center;
+}
+.navicons li {
+    margin-left: 31px;
+}
+.active {
+    color: var(--arkey)!important;
+}
+
+/* banner */
+.banner {
+    background-image: url('../images/Product/product-bannner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    height: 100%;
+    /* padding: 50px 0; */
+}
+.banner p {
+    color: white;
+    max-width: 838px;
+    width: 100%;
+}
+.banner .container {
+    /* background-color: #5a08ff; */
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+/* men products */
+.menProduct .first-row {
+    margin-bottom: 30px;
+}
+
+/* feature section */
+/* Feature section */
+.feature .row {
+    /* display: flex; */
+    justify-content: space-between;
+}
+.feature h3 {
+    font-size: 28px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}
+.feature p {
+    font-size: 20px;
+    color: var(--lightblack);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* footer  */
+footer {
+    background-color: black;
+    position: relative;
+}
+.foot-img {
+    height: 100%;
+    position: absolute;
+    left: 78%;
+    background-color: rgba(73, 72, 73, 0.996);
+}
+.foot-img img {
+    mix-blend-mode: multiply;
+}
+
+footer .container {
+    padding-top: 144px;
+    padding-bottom: 144px;
+}
+
+.foot-btn {
+    background-color: white;
+    color: var(--arkey);
+    padding: 10px 28px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: var(--playfairFont);
+    margin-bottom: 100px;
+}
+.foot-items,a {
+    color: white;
+}
+.foot-items {
+    display: flex;
+    gap: 30px;
+}
+.contact ul li{
+    display: flex;
+}
+.social-icons ul {
+    display: flex;
+}
+
+.footer-head {
+    font-family: var(--playfairFont);
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+}
+.menu p,li {
+    margin-bottom: 12px;
+}
+.social-icons .footer-head {
+    margin-bottom: 30px;
+}
+.social-icons p:nth-child(2) {
+    margin-bottom: 16px;
+}
+.social-icons a {
+    border: 1px solid var(--arkey);
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.newsletter p {
+    margin-bottom: 23px;
+}
+.newsletter #email {
+    background: none;
+    outline: none;
+    border: 2px solid var(--arkey);
+    padding: 8px;
+    position: relative;
+}
+#email:focus {
+    color: white;
+}
+.newsletter input[type="submit"] {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--interFont);
+    background-color: var(--arkey);
+    border: none;
+    padding: 8px;
+    position: absolute;
+}
+
+.contact p,li {
+    margin-bottom: 17px;
+}
+.contact .contact-logo img {
+    object-fit: contain;
+}
+.contact .contact-logo {
+    margin-right: 20px;
+}
+
+.vertical-line {
+    border-left: 1px solid var(--lightblack);
+}
