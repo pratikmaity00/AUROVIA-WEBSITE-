@@ -16,7 +16,12 @@
     --lightblack: #48474A;
     --arkey: #800080;
 }
-body {
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     font-family: "Inter", sans-serif;
     font-size: 18px;
     /* background-color: antiquewhite; */
@@ -83,7 +88,6 @@ h3{
     box-shadow: 0 0 0 0 white;
 }
 .box:hover {
-    /* border: 1px solid rgba(0, 0, 0, 0.25); */
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -130,7 +134,7 @@ h3{
 /* navbar */
 .navbar {
     background-color: white;
-    padding: 38px 0;
+    padding: 20px 0;
 }
 nav {
     display: flex;
@@ -138,10 +142,11 @@ nav {
     align-items: center;
 }
 
-.navlogo img {
-    max-width: 115px;
-    width: 100%;
-    object-fit: contain;
+.navlogo a {
+    font-family: var(--playfairFont);
+    font-size: 32px;
+    color: var(--arkey);
+    font-weight: bold;
 }
 .navItems {
     display: flex;
@@ -150,6 +155,7 @@ nav {
 .navlinks ul {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 .navlinks li {
     margin-right: 100px;
@@ -161,12 +167,19 @@ nav {
 .navicons ul {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 .navicons li {
     margin-left: 31px;
 }
 .active {
     color: var(--arkey)!important;
+}
+.menubar {
+    display: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--arkey);
 }
 
 /* Banner Part */
@@ -469,3 +482,44 @@ footer .container {
 .vertical-line {
     border-left: 1px solid var(--lightblack);
 }
+
+@media screen and (max-width:1199px) {
+    .navlinks {
+        position: relative;
+        display: none;
+    }
+    .navlinks ul {
+        width: 300px;
+        height: 468px;
+        background-color: rgb(255, 255, 255);
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 21px;
+        right: -60px;
+        
+    }
+    .navlinks ul li {
+        padding: 20px 0 10px 20px;
+        border-bottom: 1px solid var(--arkey);
+        width: 100%;
+    }
+    
+    .navicons  {
+        display: none;
+    }
+    .menubar {
+        display: block;
+    }
+    .foot-items {
+        gap: 15px;
+    }
+    .banner .container {
+        justify-content: center;
+    }
+}
+@media screen and (max-width:991px) {
+    .md-col-50 {
+        width: 50%;
+    }
+    
